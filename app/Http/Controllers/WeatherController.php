@@ -15,7 +15,7 @@ class WeatherController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function display(){
-        $weather = Weather::first();
+        $weather = Weather::orderBy('created_at','desc')->first();
 
         return  view('home')
         ->with('weather',$weather);
