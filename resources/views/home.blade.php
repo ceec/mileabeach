@@ -34,7 +34,8 @@
       <h2>Pressure: {{$weather->barometric_pressure}} mb</h2>
       <h2>Average Wind: {{$weather->wind_avg}} mph {{$weather->wind_direction}}&deg; {{$weather->cardinal_direction}}
     
-
+      <p><a href="https://tempestwx.com/station/19456/">Camp Station Forcast</a>
+      <p><a href="https://tempestwx.com/station/19456/grid">Full Weather Details</a>
   </div>
 </div>
 
