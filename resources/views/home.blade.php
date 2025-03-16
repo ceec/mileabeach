@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
   <div class="col-md-12">
-    <h1>Current Conditions <?php date('F j, Y, g:i a'); ?></h1>
+    <?php date_default_timezone_set('America/New_York'); ?>
+    <h1>Current Conditions - {{ date('F j, Y, g:i a') }}</h1>
   <?php
   // Make a friendly Farenheight function
   // Move this to where it should actually go
