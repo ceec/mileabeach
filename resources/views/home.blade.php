@@ -3,8 +3,12 @@
 @section('content')
 <div class="container">
   <div class="col-md-12">
-    <?php date_default_timezone_set('America/New_York'); ?>
-    <h1>Current Conditions - {{ date('F j, Y, g:i a') }}</h1>
+  <?php 
+    $time = new DateTime($weather->created_at, new DateTimeZone('America/Denver'));
+    $time->setTimeZone(new DateTimeZone('America/New_York'));               
+    $showtime = $time->format('F j, Y g:i a');
+    ?>
+    <h1>Current Conditions - {{ $showtime }}</h1>
   <?php
   // Make a friendly Farenheight function
   // Move this to where it should actually go
