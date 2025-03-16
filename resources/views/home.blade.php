@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <div class="col-md-12">
-    <h1>Current Conditions</h1>
+    <h1>Current Conditions <?php date('F j, Y, g:i a'); ?></h1>
   <?php
   // Make a friendly Farenheight function
   // Move this to where it should actually go
